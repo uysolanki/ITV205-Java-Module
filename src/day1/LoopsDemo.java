@@ -15,8 +15,6 @@ public class LoopsDemo {
 		printTable(n);
 		
 		}
-		
-
 	}
 
 	private static void printTable(int n) {
