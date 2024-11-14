@@ -10,7 +10,7 @@ public class PrimeNumber3 {
 		int n=sc.nextInt();
 		int flag=0;    //assume number is prime
 		int loopCounter=0;
-		for(int i=2;i<=Math.sqrt(n);i++)
+		for(int i=2;i<=n/2;i++)
 		{
 			loopCounter++;
 			if(n%i==0)
