@@ -9,6 +9,7 @@ public class Employee extends Person{
 	
 	public void acceptEmployee()
 	{
+		super.acceptPerson();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter emp Number");  //ben@gmail.com
 		this.eno= sc.nextInt();
@@ -20,6 +21,7 @@ public class Employee extends Person{
 	
 	public void displayEmployee()
 	{
+		super.displayPerson();
 		System.out.println("emp Number is "+this.eno);  //ben@gmail.com
 		System.out.println("Designation is "+this.desg);
 		System.out.println("Salary is "+this.salary);
