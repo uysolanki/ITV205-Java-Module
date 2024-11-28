@@ -8,7 +8,7 @@ public class Player {
 	int mp;
 	int rs;
 	
-	public Player()
+	public Player()  //NoArgsConstructor
 	{
 		jno=7;
 		pname="Rahul";
@@ -16,7 +16,7 @@ public class Player {
 		rs=1;
 	}
 	
-	public Player(int a, String b,int c,int d)
+	public Player(int a, String b,int c,int d) //AllArgsConstructor
 	{
 		jno=a;
 		pname=b;
@@ -24,12 +24,15 @@ public class Player {
 		rs=d;
 	}
 	
-	public Player(Player temp)
+	public Player(Player temp) //copy constructor
 	{
 		jno=temp.jno;
 		pname=temp.pname;
 		mp=temp.mp;
 		rs=temp.rs;
+		
+		
+		temp.pname="Alice";
 	}
 	
 	public void acceptPlayer()
@@ -48,6 +51,11 @@ public class Player {
 	@Override
 	public String toString() {
 		return "Player [jno=" + jno + ", pname=" + pname + ", mp=" + mp + ", rs=" + rs + "]";
+	}
+	
+	public void Player()
+	{
+		
 	}
 	
 }
