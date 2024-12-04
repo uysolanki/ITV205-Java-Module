@@ -1,4 +1,4 @@
-package day11;
+package day12;
 
 import java.util.Scanner;
 
@@ -7,7 +7,15 @@ public class Player {
 	String pname;
 	int mp;
 	int rs;
-
+	
+	static int strength;  //class scope
+	static String titleSponsor="ItVedant";
+	
+	static
+	{
+		strength=30;
+		titleSponsor="ITVedant";
+	}
 	
 	public Player()  //NoArgsConstructor
 	{
@@ -15,6 +23,7 @@ public class Player {
 		pname="Rahul";
 		mp=1;
 		rs=1;
+		strength++;
 	}
 	
 	public Player(int a, String b,int c,int d) //AllArgsConstructor
@@ -23,6 +32,7 @@ public class Player {
 		pname=b;
 		mp=c;
 		rs=d;
+		strength++;
 	}
 	
 	public Player(Player temp) //copy constructor
@@ -31,9 +41,7 @@ public class Player {
 		pname=temp.pname;
 		mp=temp.mp;
 		rs=temp.rs;
-		
-		
-		temp.pname="Alice";
+		strength++;
 	}
 	
 	public void acceptPlayer()
@@ -55,9 +63,9 @@ public class Player {
 		return "Player [jno=" + jno + ", pname=" + pname + ", mp=" + mp + ", rs=" + rs + "]";
 	}
 	
-	public void Player()
+	public static void displayStrength()
 	{
-		
+		System.out.println("Total team strength is "+strength);
 	}
 	
 }
