@@ -9,7 +9,7 @@ public class CricketTurf implements Turf
 	}
 
 	@Override
-	public String getTurfName() {
+	public String getTurfType() {
 		return "Cricket Turf";
 	}
 

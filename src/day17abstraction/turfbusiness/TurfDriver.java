@@ -19,6 +19,7 @@ public class TurfDriver {
 		System.out.println("Enter Choice");
 		int turfchoice=sc.nextInt();
 		Turf t=null;
+		Turf.display();
 		switch(turfchoice)
 		{
 		case 1: 
@@ -36,7 +37,7 @@ public class TurfDriver {
 			System.out.println("Invalid Input");
 		}
 		
-		System.out.println("Hi, "+customerName + " You have chosen " + t.getTurfName() + ", Your total bill "+t.getTurfPrice());
+		System.out.println("Welcome to " + t.getTurfAcademy() + " Hi, "+customerName + " You have chosen " + t.getTurfType() + ", Your total bill "+t.getTurfPrice()+"\n Address " +t.getTurfAcademyLocation());
 		
 
 	}
