@@ -12,7 +12,7 @@ public class StudDriver {
 		
 		System.out.println(s1==s2);
 		
-		Student s3=s1.clone();
+		Student s3=(Student)s1.clone();
 		System.out.println(s3);
 		
 		System.out.println(s1==s3);

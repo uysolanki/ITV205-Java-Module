@@ -1,17 +1,24 @@
-package day19;
+package day25;
 
 import java.util.Scanner;
 
-public class Student implements Cloneable
-{
+public class Student {
 
 	private String emailID;
 	private int rno;
 	private String password;
 	private long mobileNumber;
 
+	public Student() {}
+	
+	public Student(String emailID, int rno, String password, long mobileNumber) {
+		this.emailID = emailID;
+		this.rno = rno;
+		this.password = password;
+		this.mobileNumber = mobileNumber;
+	}
+
 	public void acceptStudent() {
-		Student akash=new Student(); 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter email ID");  //ben@gmail.com
 		this.emailID = sc.next();
@@ -28,14 +35,6 @@ public class Student implements Cloneable
 		System.out.println("Roll Number is " + this.rno);
 		System.out.println("Password is " + this.password);
 		System.out.println("Mobile Number is " + this.mobileNumber);
-	}
-
-	public Student() {}
-	public Student(String emailID, int rno, String password, long mobileNumber) {
-		this.emailID = emailID;
-		this.rno = rno;
-		this.password = password;
-		this.mobileNumber = mobileNumber;
 	}
 
 	public String getEmailID() {
@@ -69,16 +68,6 @@ public class Student implements Cloneable
 	public void setMobileNumber(long mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
-
-	@Override
-	public String toString() {
-		return "Student [emailID=" + emailID + ", rno=" + rno + ", password=" + password + ", mobileNumber="
-				+ mobileNumber + "]";
-	}
 	
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
-		return super.clone();
-	}
+	
 }
