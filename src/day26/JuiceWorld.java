@@ -10,17 +10,15 @@ public class JuiceWorld {
 	public static void main(String[] args) {
 		
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter Number of Apple Juices");
+		System.out.println("Enter Number of Apple Juices"); //7
 		int appleJuice=sc.nextInt();
-		System.out.println("Enter Number of Mango Juices");
+		System.out.println("Enter Number of Mango Juices"); //6
 		int mangoJuice=sc.nextInt();
-		System.out.println("Enter Number of SB Juices");
+		System.out.println("Enter Number of SB Juices");    //5
 		int sbJuice=sc.nextInt();
 		
 		int minimumTime=calculateTime(appleJuice,mangoJuice,sbJuice);
 		System.out.println("Minimum Time "+minimumTime);
-		
-
 	}
 
 	private static int calculateTime(int appleJuice, int mangoJuice, int sbJuice) {
@@ -32,7 +30,7 @@ public class JuiceWorld {
 		pqueue.add(sbJuice);
 		
 		
-		Iterator itr=pqueue.iterator();
+		Iterator itr=pqueue.iterator();	//5  , 5 , 4            
 		
 		while(!pqueue.isEmpty())
 		{
@@ -41,12 +39,12 @@ public class JuiceWorld {
 			
 			if(itr.hasNext())
 			{
-				j1=pqueue.remove();
+				j1=pqueue.remove();		//j1=0
 			}
 			
 			if(itr.hasNext())
 			{
-				j2=pqueue.remove();
+				j2=pqueue.remove();		//j2=0
 			}
 			
 			if(j1>0 && j2==0)
@@ -55,7 +53,7 @@ public class JuiceWorld {
 				break;
 			}
 			
-			if(j1>0 && j2>0)
+			if(j1>0 && j2>0)			//seconds 0, 1, 2
 			{
 				seconds++;
 				j1--;
