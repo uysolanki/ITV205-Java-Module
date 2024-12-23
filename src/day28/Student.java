@@ -2,7 +2,8 @@ package day28;
 
 import java.util.Scanner;
 
-public class Student {
+public class Student implements Comparable<Student>
+{
 
 	private String studName;
 	private int rno;
@@ -75,6 +76,27 @@ public class Student {
 		return "Student [studName=" + studName + ", rno=" + rno + ", age=" + age + ", mobileNumber=" + mobileNumber
 				+ "]";
 	}
+
+	@Override
+	public int compareTo(Student o) {
+		if(this.age > o.age)
+			return 1;
+		else if(this.age < o.age)
+			return -1;
+		else
+			return 0;
+	}
+
+//	@Override
+//	public int compareTo(Student o) {
+//		if(this.rno > o.rno)
+//			return 1;
+//		else if(this.rno < o.rno)
+//			return -1;
+//		else
+//			return 0;
+//			
+//	}
 
 	
 	

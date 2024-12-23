@@ -6,7 +6,7 @@ import java.util.TreeSet;
 public class TreeSetDemo {
 
 	public static void main(String[] args) {
-			Set<String> names=new TreeSet();
+			Set<String> names=new TreeSet();		//arrange data in Asc order
 			names.add("Alice");
 			names.add("Frank");
 			names.add("Ben");
