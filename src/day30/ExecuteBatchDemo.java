@@ -11,7 +11,7 @@ public class ExecuteBatchDemo {
 		
 		Statement st=con.createStatement();
 		String query;
-		query="insert into emp values(102,'David',1000)";
+		query="insert into emp values(101,'David',1000)";
 		st.addBatch(query);
 		
 		query="insert into emp values(103,'Chris',700)";
