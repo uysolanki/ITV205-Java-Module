@@ -11,9 +11,9 @@ public class InsertUsingStatement {
 		Class.forName("com.mysql.jdbc.Driver");   //8.0.33 com.mysql.cj.jdbc.Driver
 		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/itvjdbcdb","root","");
 		
-		Statement st=con.createStatement();
+		Statement st=con.createStatement();  //first
 		
-		String query="insert into emp values(101,'Alice',800)";
+		String query="insert into emp values(101,'Alice',800)"; //second
 		int rows=st.executeUpdate(query);
 		
 		if(rows>0)
